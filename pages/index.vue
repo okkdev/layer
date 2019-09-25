@@ -1,25 +1,34 @@
 <template>
   <div class="container">
+    <template v-for="(comp, index) in componentList">
+      <component :is="comp" :key="index" />
+    </template>
     $
     <input v-model="command" type="text" @keyup.enter="execute" />
   </div>
 </template>
 
 <script>
+import Help from '~/components/Help'
+import Whoami from '~/components/Whoami'
+
 export default {
-  data() {
-    return {
-      command: ''
-    }
+  components: {
+    Help,
+    Whoami
   },
+  data: () => ({
+    command: '',
+    componentList: []
+  }),
   methods: {
     execute(event) {
-      switch (this.command.trim) {
+      switch (this.command.toLowerCase().trim()) {
         case 'help':
-          // code block
+          this.componentList.push('Help')
           break
         case 'whoami':
-          // code block
+          this.componentList.push('Whoami')
           break
         case '':
           break
@@ -31,7 +40,6 @@ export default {
             ' is not a valid command. Run help to see valid commands.'
           )
       }
-      alert(this.command)
     }
   }
 }
