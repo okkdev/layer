@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
+  <center>
     <Commandline></Commandline>
-  </div>
+  </center>
 </template>
 
 <script>

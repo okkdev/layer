@@ -1,10 +1,19 @@
 <template>
-  <div class="container">
+  <div class="p-4 text-left">
     <template v-for="(comp, index) in componentList">
       <component :is="comp" :key="index" :command="executedCommand" />
     </template>
-    $
-    <input v-model="command" type="text" autofocus @keyup.enter="execute" />
+    <div class="flex">
+      <label for="commandline" class="mr-3">$</label>
+      <input
+        id="commandline"
+        v-model="command"
+        type="text"
+        class="flex-1 appearance-none bg-transparent"
+        autofocus
+        @keyup.enter="execute"
+      />
+    </div>
   </div>
 </template>
 
@@ -39,6 +48,11 @@ export default {
           break
         case 'whoami':
           this.componentList.push(Whoami)
+          break
+        case 'clear':
+          this.componentList = []
+          break
+        case '':
           break
         default:
           this.componentList.push(Invalid)
