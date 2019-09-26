@@ -1,5 +1,5 @@
 <template>
-  <div>$ {{ lastCommand }}</div>
+  <div>$ {{ executedCommand }}</div>
 </template>
 
 <script>
@@ -12,7 +12,7 @@ export default {
   },
   data() {
     return {
-      lastCommand: this.command
+      executedCommand: this.command
     }
   }
 }

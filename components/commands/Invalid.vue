@@ -1,6 +1,7 @@
 <template>
   <div>
-    "{{ lastCommand }}" is not a valid command. Run help to see valid commands.
+    "{{ executedCommand }}" is not a valid command. Run help to see valid
+    commands.
   </div>
 </template>
 
@@ -14,7 +15,7 @@ export default {
   },
   data() {
     return {
-      lastCommand: this.command
+      executedCommand: this.command
     }
   }
 }

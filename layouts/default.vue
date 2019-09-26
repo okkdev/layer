@@ -4,4 +4,8 @@
   </div>
 </template>
 
-<style></style>
+<style>
+body {
+  font-family: 'Overpass Mono', 'Courier New', Courier, monospace;
+}
+</style>
