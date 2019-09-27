@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 text-left">
+  <div class="m-4 text-left">
     <template v-for="(comp, index) in componentList">
       <component :is="comp" :key="index" :command="executedCommand" />
     </template>
@@ -37,6 +37,13 @@ export default {
     executedCommand: '',
     componentList: []
   }),
+  mounted() {
+    window.addEventListener('keydown', function(event) {
+      if (!event.ctrlKey) {
+        document.getElementById('commandline').focus()
+      }
+    })
+  },
   methods: {
     execute(event) {
       this.executedCommand = this.command
