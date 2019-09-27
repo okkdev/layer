@@ -1,18 +1,26 @@
 <template>
-  <div class="m-4 text-left">
-    <template v-for="(comp, index) in componentList">
-      <component :is="comp" :key="index" :command="executedCommand" />
-    </template>
-    <div class="flex">
-      <label for="commandline" class="mr-3">$</label>
-      <input
-        id="commandline"
-        v-model="command"
-        type="text"
-        class="flex-1 appearance-none bg-transparent"
-        autofocus
-        @keyup.enter="execute"
-      />
+  <div class="absolute overflow-y-auto">
+    <div class="flex flex-col text-left">
+      <template v-for="(comp, index) in componentList">
+        <component
+          :is="comp"
+          :key="index"
+          :command="executedCommand"
+          class="flex-row"
+        />
+      </template>
+
+      <div class="flex-row sticky bottom-0 bg-black">
+        <label for="commandline" class="flex-none mr-3">$</label>
+        <input
+          id="commandline"
+          v-model="command"
+          type="text"
+          class="flex-1 appearance-none bg-transparent"
+          autofocus
+          @keyup.enter="execute"
+        />
+      </div>
     </div>
   </div>
 </template>

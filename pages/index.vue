@@ -1,7 +1,7 @@
 <template>
-  <center>
+  <div class="container mx-auto max-h-screen p-4 pt-40 pb-40">
     <Commandline></Commandline>
-  </center>
+  </div>
 </template>
 
 <script>
