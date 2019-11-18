@@ -1,5 +1,5 @@
 <template>
-  <div>$ {{ executedCommand }}</div>
+  <div>> {{ executedCommand }}</div>
 </template>
 
 <script>

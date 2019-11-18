@@ -1,26 +1,21 @@
 <template>
-  <div class="absolute overflow-y-auto">
-    <div class="flex flex-col text-left">
+  <div class="h-full grid">
+    <div class="output flex flex-col justify-start overflow-y-auto">
       <template v-for="(comp, index) in componentList">
-        <component
-          :is="comp"
-          :key="index"
-          :command="executedCommand"
-          class="flex-row"
-        />
+        <component :is="comp" :key="index" :command="executedCommand" />
       </template>
+    </div>
 
-      <div class="flex-row sticky bottom-0 bg-black">
-        <label for="commandline" class="flex-none mr-3">$</label>
-        <input
-          id="commandline"
-          v-model="command"
-          type="text"
-          class="flex-1 appearance-none bg-transparent"
-          autofocus
-          @keyup.enter="execute"
-        />
-      </div>
+    <div class="border-2 bg-gray-900 rounded margin p-3">
+      <label for="commandline">></label>
+      <input
+        id="commandline"
+        v-model="command"
+        type="text"
+        autofocus
+        class="bg-transparent w-11/12"
+        @keyup.enter="execute"
+      />
     </div>
   </div>
 </template>
@@ -79,4 +74,13 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.output > :first-child {
+  margin-top: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+}
+</style>
