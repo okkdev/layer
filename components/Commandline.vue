@@ -1,6 +1,9 @@
 <template>
   <div class="h-full grid">
-    <div class="output flex flex-col justify-start overflow-y-auto">
+    <div
+      ref="output"
+      class="output flex flex-col justify-start overflow-y-auto"
+    >
       <template v-for="(comp, index) in componentList">
         <component :is="comp" :key="index" :command="executedCommand" />
       </template>
@@ -22,11 +25,11 @@
 
 <script>
 import History from '~/components/History'
+import Invalid from '~/components/Invalid'
 
 // Commands
 import Help from '~/components/commands/Help'
 import Whoami from '~/components/commands/Whoami'
-import Invalid from '~/components/commands/Invalid'
 
 export default {
   components: {
