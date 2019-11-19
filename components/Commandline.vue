@@ -71,6 +71,10 @@ export default {
           this.componentList.push(Invalid)
       }
 
+      this.$nextTick(() => {
+        this.$refs.output.scrollTop = this.$refs.output.scrollHeight
+      })
+
       this.command = ''
     }
   }
