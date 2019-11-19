@@ -15,7 +15,7 @@ export default {
   },
   data: () => ({
     bgImage: '',
-    imageNo: 8
+    imageNo: 40
   }),
   mounted() {
     this.bgImage = 'img/' + Math.floor(Math.random() * this.imageNo) + '.gif'
