@@ -1,7 +1,7 @@
 <template>
   <div
     class="bg-cover bg-center overflow-hidden"
-    :style="'background-image: url(img/bg/' + bgImage + '.gif)'"
+    :style="'background-image: url(/img/bg/' + bgImage + '.gif)'"
   >
     <div class="bg-overlay">
       <div class="container mx-auto h-screen">
