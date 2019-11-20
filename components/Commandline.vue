@@ -10,7 +10,7 @@
     </div>
 
     <div
-      class="flex flex-row border-2 border-gray-200 bg-texture shadow-md rounded margin p-3 mt-3"
+      class="flex flex-row border-2 border-gray-200 bg-texture shadow-lg rounded margin p-3 mt-3"
     >
       <label for="commandline" class="flex-grow-0 mr-2">></label>
       <input
