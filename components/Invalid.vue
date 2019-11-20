@@ -13,8 +13,10 @@ export default {
       type: String
     }
   },
-  data: () => ({
-    executedCommand: this.command
-  })
+  data() {
+    return {
+      executedCommand: this.command
+    }
+  }
 }
 </script>
