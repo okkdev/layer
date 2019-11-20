@@ -10,10 +10,8 @@ export default {
       type: String
     }
   },
-  data() {
-    return {
-      executedCommand: this.command
-    }
-  }
+  data: () => ({
+    executedCommand: this.command
+  })
 }
 </script>
