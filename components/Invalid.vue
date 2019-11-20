@@ -1,7 +1,6 @@
 <template>
   <div>
-    "{{ executedCommand }}" is not a valid command. Run help to see valid
-    commands.
+    "{{ command }}" is not a valid command. Run help to see valid commands.
   </div>
 </template>
 
@@ -11,11 +10,6 @@ export default {
     command: {
       default: '',
       type: String
-    }
-  },
-  data() {
-    return {
-      executedCommand: this.command
     }
   }
 }
