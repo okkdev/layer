@@ -9,14 +9,14 @@
       </template>
     </div>
 
-    <div class="border-2 bg-gray-900 rounded margin p-3">
-      <label for="commandline">></label>
+    <div class="flex flex-row border-2 bg-gray-900 rounded margin p-3">
+      <label for="commandline" class="flex-grow-0 mr-2">></label>
       <input
         id="commandline"
         v-model="command"
         type="text"
         autofocus
-        class="bg-transparent w-11/12"
+        class="bg-transparent focus:outline-none flex-grow"
         @keyup.enter="execute"
       />
     </div>
