@@ -9,7 +9,7 @@
     </div>
 
     <div class="text-center md:text-left md:flex md:flex-col md:justify-center">
-      <h2 class="text-lg">Jen Stehlik</h2>
+      <h2 class="text-2xl">Jen Stehlik</h2>
       <div class="text-purple-200">
         <a :href="'mailto:' + ma + '%40' + mb">{{ ma }}@{{ mb }}</a>
       </div>

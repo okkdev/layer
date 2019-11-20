@@ -13,9 +13,7 @@
 /* Global Style */
 body {
     font-family: Iosevka, 'Courier New', Courier, monospace;
-    font-size: 1.2rem;
-    color: #f7fafc;
-    background-color: black;
+    @apply text-lg text-gray-200 bg-black;
 }
 
 .img-overlay {
