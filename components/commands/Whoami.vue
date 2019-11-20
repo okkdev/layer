@@ -7,7 +7,7 @@
     <div class="text-center">
       <h2 class="text-lg">Jen Stehlik</h2>
       <div class="text-purple-200">
-        <a :href="'mailto:' + mail">{{ mail }}</a>
+        <a :href="'mailto:' + ma + '%40' + mb">{{ ma }}@{{ mb }}</a>
       </div>
     </div>
   </div>
@@ -16,15 +16,19 @@
 <script>
 export default {
   data: () => ({
-    mail: ''
+    ma: 'bmVq',
+    mb: 'ZW0ua2lsaGV0cw=='
   }),
   mounted() {
-    const m = 'ZW0ua2lsaGV0c0BuZWo='
-    this.mail = this.reverseString(atob(m))
+    this.ma = this.decode(this.ma)
+    this.mb = this.decode(this.mb)
   },
   methods: {
     reverseString(str) {
       return str === '' ? '' : this.reverseString(str.substr(1)) + str.charAt(0)
+    },
+    decode(x) {
+      return this.reverseString(atob(x))
     }
   }
 }
