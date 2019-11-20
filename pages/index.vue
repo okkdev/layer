@@ -1,10 +1,10 @@
 <template>
   <div
-    class="bg-cover bg-center"
+    class="bg-cover bg-center overflow-hidden"
     :style="'background-image: url(img/bg/' + bgImage + '.gif)'"
   >
     <div class="bg-overlay">
-      <div class="container mx-auto h-screen overflow-hidden">
+      <div class="container mx-auto h-screen">
         <Commandline class="stutter"></Commandline>
       </div>
     </div>
@@ -40,7 +40,7 @@ export default {
   }
   to {
     transform: translate(0px, 1px);
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 

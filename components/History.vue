@@ -1,5 +1,8 @@
 <template>
-  <div>> {{ executedCommand }}</div>
+  <div class="flex">
+    <div class="mr-2">></div>
+    <div>{{ executedCommand }}</div>
+  </div>
 </template>
 
 <script>
