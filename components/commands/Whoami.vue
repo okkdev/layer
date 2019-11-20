@@ -1,14 +1,19 @@
 <template>
-  <div class="p-3">
-    <div class="img-overlay mx-auto w-32 rounded-full mb-2">
+  <div
+    class="md:flex p-3 mx-auto border-2 border-gray-200 rounded-lg bg-dark-800 md:ml-0 md:mr-auto"
+  >
+    <div
+      class="img-overlay mx-auto w-24 rounded-full mb-2 md:mb-0 md:mx-0 md:mr-3"
+    >
       <img src="/img/avatar.jpg" />
     </div>
 
-    <div class="text-center">
+    <div class="text-center md:text-left md:flex md:flex-col md:justify-center">
       <h2 class="text-lg">Jen Stehlik</h2>
       <div class="text-purple-200">
         <a :href="'mailto:' + ma + '%40' + mb">{{ ma }}@{{ mb }}</a>
       </div>
+      <div>Software Developer</div>
     </div>
   </div>
 </template>
