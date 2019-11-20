@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-cover"
+    class="bg-cover bg-center"
     :style="'background-image: url(img/bg/' + bgImage + '.gif)'"
   >
     <div class="bg-overlay">
