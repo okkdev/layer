@@ -10,7 +10,8 @@ export default {
       type: String
     }
   },
-  data: () => {
+  data() {
+    return {
       executedCommand: this.command
     }
   }
