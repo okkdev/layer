@@ -32,13 +32,15 @@ import Invalid from '~/components/Invalid'
 // Commands
 import Help from '~/components/commands/Help'
 import Whoami from '~/components/commands/Whoami'
+import Yana from '~/components/commands/Yana'
 
 export default {
   components: {
+    History,
+    Invalid,
     Help,
     Whoami,
-    Invalid,
-    History
+    Yana
   },
   data: () => ({
     command: '',
@@ -63,6 +65,9 @@ export default {
           break
         case 'whoami':
           this.componentList.push(Whoami)
+          break
+        case 'yana':
+          this.componentList.push(Yana)
           break
         case 'clear':
           this.componentList = []
