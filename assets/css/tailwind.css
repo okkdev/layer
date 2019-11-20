@@ -1,3 +1,19 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+/* Fonts */
+@font-face {
+    font-family: Iosevka;
+    src:
+        url('/fonts/iosevka-type-regular.woff2') format('woff2'),
+        url('/fonts/iosevka-type-regular.woff') format('woff');
+}
+
+/* Global Style */
+body {
+    font-family: Iosevka, 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    color: #f7fafc;
+    background-color: black;
+}

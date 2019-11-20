@@ -1,7 +1,7 @@
 <template>
   <div
     class="bg-cover"
-    :style="'background-image: url(img/' + bgImage + '.gif)'"
+    :style="'background-image: url(img/bg/' + bgImage + '.gif)'"
   >
     <div class="bg-overlay">
       <div class="container mx-auto h-screen overflow-hidden">
@@ -29,15 +29,6 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Overpass+Mono&display=swap');
-
-body {
-  font-family: 'Overpass Mono', 'Courier New', Courier, monospace;
-  font-size: 1.2rem;
-  color: #f7fafc;
-  background-color: black;
-}
-
 .stutter {
   animation: stutter 0.9ms linear infinite;
 }

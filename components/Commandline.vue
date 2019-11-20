@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full grid">
+  <div class="h-full overflow-hidden grid">
     <div
       ref="output"
       class="output flex flex-col justify-start overflow-y-auto px-4"
