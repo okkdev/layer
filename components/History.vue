@@ -1,5 +1,5 @@
 <template>
-  <div>> {{ command }}</div>
+  <div>> {{ executedCommand }}</div>
 </template>
 
 <script>
@@ -8,6 +8,10 @@ export default {
     command: {
       default: '',
       type: String
+    }
+  },
+  data: () => {
+      executedCommand: this.command
     }
   }
 }
