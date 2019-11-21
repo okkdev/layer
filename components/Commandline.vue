@@ -2,7 +2,7 @@
   <div class="h-full overflow-hidden grid">
     <div
       ref="output"
-      class="output flex flex-col justify-start overflow-y-auto px-4"
+      class="h-full output flex flex-col justify-start overflow-y-auto px-4"
     >
       <template v-for="(comp, index) in componentList">
         <component :is="comp" :key="index" :command="executedCommand" />
@@ -22,6 +22,7 @@
         @keyup.enter="execute"
       />
     </div>
+    <div class="h-full"></div>
   </div>
 </template>
 
@@ -112,8 +113,13 @@ export default {
 }
 
 .grid {
-  display: grid;
-  grid-template-rows: 1fr min-content 1fr;
+  display: flex;
+  flex-direction: column;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr;
+  }
 }
 
 .bg-texture {
