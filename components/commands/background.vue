@@ -40,7 +40,7 @@ export default {
         this.handleParam(param)
       } else {
         this.$store.commit('background/random')
-        this.message = 'Refreshed random background image'
+        this.message = 'Changed random background image'
       }
     },
     handleParam(param) {
