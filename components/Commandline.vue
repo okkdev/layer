@@ -50,8 +50,12 @@ export default {
     componentList: []
   }),
   mounted() {
-    window.addEventListener('keydown', function(event) {
+    const root = this
+    window.addEventListener('keydown', (event) => {
       if (!event.ctrlKey) {
+        if (event.keyCode === 38) {
+          root.lastCommand()
+        }
         document.getElementById('commandline').focus()
       }
     })
@@ -94,6 +98,9 @@ export default {
       })
 
       this.command = ''
+    },
+    lastCommand() {
+      this.command = this.executedCommand
     }
   }
 }
