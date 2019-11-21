@@ -18,12 +18,13 @@ export default {
   components: {
     Commandline
   },
-  data: () => ({
-    bgImage: '',
-    imageNo: 40
-  }),
+  computed: {
+    bgImage() {
+      return this.$store.state.background.image
+    }
+  },
   mounted() {
-    this.bgImage = Math.floor(Math.random() * this.imageNo)
+    this.$store.commit('background/random')
   }
 }
 </script>
