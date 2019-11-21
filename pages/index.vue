@@ -1,9 +1,9 @@
 <template>
   <div
-    class="bg-cover bg-center overflow-hidden"
+    class="bg-cover bg-center"
     :style="'background-image: url(/img/bg/' + bgImage + '.gif)'"
   >
-    <div class="bg-overlay">
+    <div class="bg-overlay overflow-hidden">
       <div class="container mx-auto h-screen">
         <Commandline class="stutter"></Commandline>
       </div>
