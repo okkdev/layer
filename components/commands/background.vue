@@ -1,5 +1,17 @@
 <template>
-  <div>{{ message }}</div>
+  <div>
+    {{ message }}
+    <div v-if="help" class="text-m flex">
+      <div class="mr-3 text-orange-200">
+        <div>count</div>
+        <div>[number]</div>
+      </div>
+      <div>
+        <div>- show amount of available backgrounds</div>
+        <div>- change background to [number]</div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -13,8 +25,8 @@ export default {
   data() {
     return {
       executedCommand: this.command,
-      param: 0,
-      message: ''
+      message: '',
+      help: false
     }
   },
   mounted() {
@@ -37,8 +49,15 @@ export default {
         this.message = 'Set background to ' + param
       } else if (param === 'count') {
         this.message = this.$store.state.background.imageNo
+      } else if (param === 'help') {
+        this.message =
+          'Use without parameters to switch to random background. Parameters:'
+        this.help = true
       } else {
-        this.message = '"' + param + '" is not a valid parameter'
+        this.message =
+          '"' +
+          param +
+          '" is not a valid parameter. Use "background help" to see possible parameters.'
       }
     }
   }
