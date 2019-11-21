@@ -76,6 +76,7 @@ export default {
         case 'yana':
           this.componentList.push(Yana)
           break
+        case 'bg':
         case 'background':
           this.componentList.push(Background)
           break
