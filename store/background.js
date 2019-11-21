@@ -1,6 +1,6 @@
 export const state = () => ({
   image: 0,
-  imageNo: 40
+  imageNo: 44
 })
 
 export const mutations = {
