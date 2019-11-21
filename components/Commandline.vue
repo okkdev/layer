@@ -1,8 +1,8 @@
 <template>
-  <div class="h-full overflow-hidden grid">
+  <div class="h-full grid">
     <div
       ref="output"
-      class="h-full output flex flex-col justify-start overflow-y-auto px-4"
+      class="h-full flex-grow-0 output flex flex-col justify-start overflow-y-auto px-4"
     >
       <template v-for="(comp, index) in componentList">
         <component :is="comp" :key="index" :command="executedCommand" />
