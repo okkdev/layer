@@ -22,7 +22,7 @@
         @keyup.enter="execute"
       />
     </div>
-    <div class="h-full"></div>
+    <div class="h-full flex-shrink-0"></div>
   </div>
 </template>
 
