@@ -33,6 +33,7 @@ import Invalid from '~/components/Invalid'
 import Help from '~/components/commands/Help'
 import Whoami from '~/components/commands/Whoami'
 import Yana from '~/components/commands/Yana'
+import Background from '~/components/commands/Background'
 
 export default {
   components: {
@@ -40,7 +41,8 @@ export default {
     Invalid,
     Help,
     Whoami,
-    Yana
+    Yana,
+    Background
   },
   data: () => ({
     command: '',
@@ -59,7 +61,12 @@ export default {
       this.executedCommand = this.command
       this.componentList.push(History)
 
-      switch (this.command.toLowerCase().trim()) {
+      switch (
+        this.command
+          .toLowerCase()
+          .trim()
+          .split(' ', 1)[0]
+      ) {
         case 'help':
           this.componentList.push(Help)
           break
@@ -68,6 +75,9 @@ export default {
           break
         case 'yana':
           this.componentList.push(Yana)
+          break
+        case 'background':
+          this.componentList.push(Background)
           break
         case 'clear':
           this.componentList = []
