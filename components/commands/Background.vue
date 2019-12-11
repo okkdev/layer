@@ -1,17 +1,13 @@
 <template>
   <div>
     {{ message }}
-    <div v-if="help" class="text-m flex">
-      <div class="mr-3 text-orange-200">
-        <div>count</div>
-        <div>current</div>
-        <div>[number]</div>
-      </div>
-      <div>
-        <div>- show amount of available backgrounds</div>
-        <div>- show current background number</div>
-        <div>- change background to [number]</div>
-      </div>
+    <div v-if="help" class="text-m">
+      <div class="command">count</div>
+      <div class="description">show amount of available backgrounds</div>
+      <div class="command">current</div>
+      <div class="description">show current background number</div>
+      <div class="command">[number]</div>
+      <div class="description">change background to [number]</div>
     </div>
   </div>
 </template>
@@ -61,7 +57,9 @@ export default {
         this.message =
           '"' +
           param +
-          '" is not a valid parameter. Use "background help" to see possible parameters.'
+          '" is not a valid parameter. Use "' +
+          this.executedCommand.split(' ', 2)[0] +
+          ' help" to see possible parameters.'
       }
     }
   }
