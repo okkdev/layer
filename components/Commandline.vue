@@ -34,6 +34,7 @@ import Help from '~/components/commands/Help'
 import Whoami from '~/components/commands/Whoami'
 import Yana from '~/components/commands/Yana'
 import Background from '~/components/commands/Background'
+import Ruslan from '~/components/commands/Ruslan'
 
 export default {
   components: {
@@ -42,7 +43,8 @@ export default {
     Help,
     Whoami,
     Yana,
-    Background
+    Background,
+    Ruslan
   },
   data: () => ({
     command: '',
@@ -83,6 +85,9 @@ export default {
         case 'bg':
         case 'background':
           this.componentList.push(Background)
+          break
+        case 'ruslan':
+          this.componentList.push(Ruslan)
           break
         case 'clear':
           this.componentList = []
