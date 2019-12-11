@@ -11,9 +11,13 @@
 }
 
 /* Global Style */
+html, #__layout, #__nuxt {
+    @apply h-full;
+}
+
 body {
     font-family: Iosevka, 'Courier New', Courier, monospace;
-    @apply text-lg text-gray-200 bg-black relative;
+    @apply text-lg text-gray-200 bg-black relative h-full;
 }
 
 .img-overlay {

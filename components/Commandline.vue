@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full grid">
+  <div class="min-h-full grid">
     <div ref="output" class="overflow-y-auto">
       <div class="h-full output flex flex-col justify-start px-4">
         <template v-for="(comp, index) in componentList">
