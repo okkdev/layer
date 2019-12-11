@@ -4,10 +4,12 @@
     <div v-if="help" class="text-m flex">
       <div class="mr-3 text-orange-200">
         <div>count</div>
+        <div>current</div>
         <div>[number]</div>
       </div>
       <div>
         <div>- show amount of available backgrounds</div>
+        <div>- show current background number</div>
         <div>- change background to [number]</div>
       </div>
     </div>
@@ -49,6 +51,8 @@ export default {
         this.message = 'Set background to ' + param
       } else if (param === 'count') {
         this.message = this.$store.state.background.imageNo
+      } else if (param === 'current') {
+        this.message = this.$store.state.background.image
       } else if (param === 'help') {
         this.message =
           'Use without parameters to switch to random background. Parameters:'
