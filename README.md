@@ -1,22 +1,25 @@
 # layer
 
-> .
+> layered life
 
-## Build Setup
+## Run dev instance
 
 ``` bash
-# install dependencies
-$ npm run install
-
 # serve with hot reload at localhost:3000
 $ npm run dev
+```
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+## Deploy
 
-# generate static project
+``` bash
+# generate static site in /public folder
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Add command
+
+There is a template at `/components/commands/Template.vue`.
+
+1. Create a new command component
+1. Import the component in `/components/Commandline.vue`
+1. Create a new case in the switch of the commandline
