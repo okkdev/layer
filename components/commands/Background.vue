@@ -2,12 +2,15 @@
   <div>
     {{ message }}
     <div v-if="help" class="text-m">
-      <div class="command">count</div>
-      <div class="description">show amount of available backgrounds</div>
-      <div class="command">current</div>
-      <div class="description">show current background number</div>
-      <div class="command">[number]</div>
-      <div class="description">change background to [number]</div>
+      Parameters:
+      <div class="pl-2">
+        <div class="command">count</div>
+        <div class="description">show amount of available backgrounds</div>
+        <div class="command">current</div>
+        <div class="description">show current background number</div>
+        <div class="command">[number]</div>
+        <div class="description">change background to [number]</div>
+      </div>
     </div>
   </div>
 </template>
@@ -50,8 +53,7 @@ export default {
       } else if (param === 'current') {
         this.message = this.$store.state.background.image
       } else if (param === 'help') {
-        this.message =
-          'Use without parameters to switch to random background. Parameters:'
+        this.message = 'Use without parameters to switch to random background.'
         this.help = true
       } else {
         this.message =
