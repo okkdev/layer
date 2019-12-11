@@ -1,12 +1,11 @@
 <template>
   <div class="h-full grid">
-    <div
-      ref="output"
-      class="h-full output flex flex-col justify-start overflow-y-auto px-4"
-    >
-      <template v-for="(comp, index) in componentList">
-        <component :is="comp" :key="index" :command="executedCommand" />
-      </template>
+    <div ref="output" class="overflow-y-auto">
+      <div class="h-full output flex flex-col justify-start px-4">
+        <template v-for="(comp, index) in componentList">
+          <component :is="comp" :key="index" :command="executedCommand" />
+        </template>
+      </div>
     </div>
 
     <div
@@ -22,7 +21,7 @@
         @keyup.enter="execute"
       />
     </div>
-    <div class="h-full"></div>
+    <div class="h-full flex-shrink-0"></div>
   </div>
 </template>
 
@@ -114,6 +113,7 @@ export default {
 
 .output > * {
   min-height: 0;
+  @apply flex-shrink-0;
 }
 
 .grid {
