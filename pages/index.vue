@@ -1,10 +1,10 @@
 <template>
   <div
-    class="bg-cover bg-center"
+    class="bg-cover bg-center h-full"
     :style="'background-image: url(/img/bg/' + bgImage + '.gif)'"
   >
-    <div class="bg-overlay overflow-hidden">
-      <div class="container mx-auto h-screen">
+    <div class="bg-overlay overflow-hidden h-full">
+      <div class="container mx-auto h-full">
         <Commandline class="stutter"></Commandline>
       </div>
     </div>
