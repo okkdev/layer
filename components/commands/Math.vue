@@ -20,8 +20,12 @@ export default {
     }
   },
   mounted() {
-    // eslint-disable-next-line
-    this.message = eval(this.executedCommand)
+    try {
+      // eslint-disable-next-line
+      this.message = eval(this.executedCommand)
+    } catch {
+      this.message = 'not a valid mathematical expression'
+    }
   }
 }
 </script>
