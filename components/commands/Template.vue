@@ -4,7 +4,7 @@
     <div v-if="help" class="text-m">
       <!-- add parameter help here -->
       Parameters:
-      <div class="pl-2">
+      <div class="ml-2">
         <div class="command">Parameter</div>
         <div class="description">Parameter description</div>
       </div>

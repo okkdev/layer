@@ -3,7 +3,7 @@
     {{ message }}
     <div v-if="help" class="text-m">
       Parameters:
-      <div class="pl-2">
+      <div class="ml-2">
         <div class="command">count</div>
         <div class="description">show amount of available backgrounds</div>
         <div class="command">current</div>
