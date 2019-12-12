@@ -113,7 +113,7 @@ export default {
       this.command = this.executedCommand
     },
     matchMath(m) {
-      if (/(\s*\d+(.\d+)?\s*[-+/*]*)+/.test(m)) {
+      if (/^(\s*\d+(.\d+)?\s*[-+/*]?)+$/.test(m)) {
         return m
       } else {
         return false
