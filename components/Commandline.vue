@@ -67,6 +67,7 @@ export default {
       this.executedCommand = this.command
       this.componentList.push(History)
 
+      // Switch off all commands and their aliases
       switch (
         this.command
           .toLowerCase()
@@ -122,6 +123,7 @@ export default {
 }
 
 .grid {
+  /* flexbox fallback for retarded browsers 👀 */
   display: flex;
   flex-direction: column;
 
