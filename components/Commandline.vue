@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-full grid">
+  <div class="h-full grid">
     <div ref="output" class="overflow-y-auto">
       <div class="h-full output flex flex-col justify-start px-4">
         <template v-for="(comp, index) in componentList">
@@ -35,6 +35,7 @@ import Whoami from '~/components/commands/Whoami'
 import Yana from '~/components/commands/Yana'
 import Background from '~/components/commands/Background'
 import Ruslan from '~/components/commands/Ruslan'
+import Math from '~/components/commands/Math'
 
 export default {
   components: {
@@ -44,7 +45,8 @@ export default {
     Whoami,
     Yana,
     Background,
-    Ruslan
+    Ruslan,
+    Math
   },
   data: () => ({
     command: '',
@@ -65,15 +67,14 @@ export default {
   methods: {
     execute(event) {
       this.executedCommand = this.command
+      const comm = this.command
+        .toLowerCase()
+        .trim()
+        .split(' ', 1)[0]
       this.componentList.push(History)
 
       // Switch off all commands and their aliases
-      switch (
-        this.command
-          .toLowerCase()
-          .trim()
-          .split(' ', 1)[0]
-      ) {
+      switch (comm) {
         case 'help':
           this.componentList.push(Help)
           break
@@ -89,6 +90,9 @@ export default {
           break
         case 'ruslan':
           this.componentList.push(Ruslan)
+          break
+        case this.matchMath(comm):
+          this.componentList.push(Math)
           break
         case 'clear':
           this.componentList = []
@@ -107,6 +111,13 @@ export default {
     },
     lastCommand() {
       this.command = this.executedCommand
+    },
+    matchMath(m) {
+      if (/(\s*\d+(.\d+)?\s*[-+/*]*)+/.test(m)) {
+        return m
+      } else {
+        return false
+      }
     }
   }
 }
