@@ -25,4 +25,4 @@ There is a template at `/components/commands/Template.vue`.
 1. Create a new command component
 1. Import the component in `/components/Commandline.vue`
 1. Create a new case in the switch of the commandline
-1. Update `/components/commands/Help.vue`
+1. Add command to `/components/commands/Help.vue`
