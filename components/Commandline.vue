@@ -36,6 +36,7 @@ import Yana from '~/components/commands/Yana'
 import Background from '~/components/commands/Background'
 import Ruslan from '~/components/commands/Ruslan'
 import Math from '~/components/commands/Math'
+import Whatsmyip from '~/components/commands/Whatsmyip'
 
 export default {
   components: {
@@ -46,7 +47,8 @@ export default {
     Yana,
     Background,
     Ruslan,
-    Math
+    Math,
+    Whatsmyip
   },
   data: () => ({
     command: '',
@@ -93,6 +95,9 @@ export default {
           break
         case this.matchMath(comm):
           this.componentList.push(Math)
+          break
+        case 'whatsmyip':
+          this.componentList.push(Whatsmyip)
           break
         case 'clear':
           this.componentList = []
