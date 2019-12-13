@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <div class="mr-2">></div>
+    <div class="mr-2">{{ dir }}></div>
     <div>{{ executedCommand }}</div>
   </div>
 </template>
@@ -16,6 +16,11 @@ export default {
   data() {
     return {
       executedCommand: this.command
+    }
+  },
+  computed: {
+    dir() {
+      return this.$store.currentDir
     }
   }
 }

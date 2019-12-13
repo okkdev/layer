@@ -7,9 +7,9 @@ export const mutations = {
   random(state) {
     state.image = Math.floor(Math.random() * state.imageNo)
   },
-  set(state, no) {
-    if (no <= state.imageNo) {
-      state.image = no
+  set(state, n) {
+    if (n <= state.imageNo) {
+      state.image = n
     }
   }
 }

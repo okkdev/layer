@@ -11,7 +11,7 @@
     <div
       class="flex flex-row border-2 border-gray-200 bg-texture shadow-lg rounded margin p-3 mt-3"
     >
-      <label for="commandline" class="flex-grow-0 mr-2">></label>
+      <label for="commandline" class="flex-grow-0 mr-2">{{ dir }}></label>
       <input
         id="commandline"
         v-model="command"
@@ -37,6 +37,7 @@ import Background from '~/components/commands/Background'
 import Ruslan from '~/components/commands/Ruslan'
 import Math from '~/components/commands/Math'
 import Whatsmyip from '~/components/commands/Whatsmyip'
+import Cd from '~/components/commands/Cd'
 
 export default {
   components: {
@@ -48,13 +49,19 @@ export default {
     Background,
     Ruslan,
     Math,
-    Whatsmyip
+    Whatsmyip,
+    Cd
   },
   data: () => ({
     command: '',
     executedCommand: '',
     componentList: []
   }),
+  computed: {
+    dir() {
+      return this.$store.currentDir
+    }
+  },
   mounted() {
     const root = this
     window.addEventListener('keydown', (event) => {
@@ -98,6 +105,10 @@ export default {
           break
         case 'whatsmyip':
           this.componentList.push(Whatsmyip)
+          break
+        case 'cd':
+          console.log(this.dir)
+          this.componentList.push(Cd)
           break
         case 'clear':
           this.componentList = []
