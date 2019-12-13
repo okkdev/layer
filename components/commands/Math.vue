@@ -15,8 +15,7 @@ export default {
   data() {
     return {
       executedCommand: this.command,
-      message: '',
-      help: false
+      message: ''
     }
   },
   mounted() {
