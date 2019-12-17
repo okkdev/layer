@@ -1,0 +1,12 @@
+<template>
+  <div>
+    <a href="https://blog.darker.dev/" target="_">
+      Vue for the win
+    </a>
+  </div>
+</template>
+
+<script>
+export default {
+}
+</script>
