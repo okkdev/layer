@@ -105,8 +105,6 @@ export default {
           this.componentList = []
           break
         case 'björn':
-          this.componentList.push(Björn)
-          break
         case 'bjoern':
           this.componentList.push(Björn)
           break
