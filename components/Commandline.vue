@@ -37,6 +37,7 @@ import Background from '~/components/commands/Background'
 import Ruslan from '~/components/commands/Ruslan'
 import Math from '~/components/commands/Math'
 import Whatsmyip from '~/components/commands/Whatsmyip'
+import Björn from '~/components/commands/Björn'
 
 export default {
   components: {
@@ -48,7 +49,8 @@ export default {
     Background,
     Ruslan,
     Math,
-    Whatsmyip
+    Whatsmyip,
+    Björn
   },
   data: () => ({
     command: '',
@@ -101,6 +103,12 @@ export default {
           break
         case 'clear':
           this.componentList = []
+          break
+        case 'björn':
+          this.componentList.push(Björn)
+          break
+        case 'bjoern':
+          this.componentList.push(Björn)
           break
         case '':
           break
